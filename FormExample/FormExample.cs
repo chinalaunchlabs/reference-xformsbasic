@@ -9,7 +9,9 @@ namespace FormExample
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new ContentPageExample ();
+//			MainPage = new ContentPageExample ();
+//			MainPage = new RelativeLayoutExample();
+			MainPage = new AbsoluteLayoutExample();
 
 //			MainPage = new ContentPage {
 //				Content = new StackLayout {
