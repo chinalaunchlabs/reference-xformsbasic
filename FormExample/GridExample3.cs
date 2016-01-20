@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace FormExample
 {
@@ -10,7 +11,6 @@ namespace FormExample
 		 */ 
 		public GridExample3 ()
 		{
-//
 			Color[] colors = {
 				Color.Red, 
 				Color.FromRgb(232, 126, 0),	// orange
@@ -41,15 +41,24 @@ namespace FormExample
 				grid.ColumnDefinitions.Add (new ColumnDefinition {Width = new GridLength (1, GridUnitType.Star) });
 			}
 
+//			var tapGesture = new TapGestureRecognizer ();
+//			tapGesture.Tapped += async (sender, e) => {
+//				Console.WriteLine("Hello");
+//			};
+
 			for (int r = 0; r < rows; r++) {
 				for (int c = 0; c < columns; c++) {
 					float multiplier = 1-((float)r / rows);
 					Color temp = Color.FromRgb(colors[c].R * multiplier, colors[c].G * multiplier, colors[c].B * multiplier);
-					string text = r + ", " + c;
+					string text = "(" + r + ", " + c + ")";
 					grid.Children.Add (new Label {
-//						Text = text,
+						Text = text,
+						FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
+						VerticalTextAlignment = TextAlignment.Center,
+						HorizontalTextAlignment = TextAlignment.Center,
 						TextColor = Color.White,
-						BackgroundColor = temp
+						BackgroundColor = temp,
+//						GestureRecognizers = tapGesture
 					}, c, r);
 				}
 			}

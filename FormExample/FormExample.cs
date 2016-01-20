@@ -12,7 +12,9 @@ namespace FormExample
 //			MainPage = new ContentPageExample ();
 //			MainPage = new RelativeLayoutExample();
 //			MainPage = new AbsoluteLayoutExample();
-			MainPage = new GridExample3();
+//			MainPage = new GridExample3();
+//			MainPage = new Controls();
+			MainPage = new JumpList();
 
 //			MainPage = new ContentPage {
 //				Content = new StackLayout {
