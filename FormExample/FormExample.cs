@@ -11,7 +11,8 @@ namespace FormExample
 			// The root page of your application
 //			MainPage = new ContentPageExample ();
 //			MainPage = new RelativeLayoutExample();
-			MainPage = new AbsoluteLayoutExample();
+//			MainPage = new AbsoluteLayoutExample();
+			MainPage = new GridExample3();
 
 //			MainPage = new ContentPage {
 //				Content = new StackLayout {
